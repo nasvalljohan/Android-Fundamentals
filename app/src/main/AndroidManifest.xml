@@ -14,10 +14,13 @@
         android:theme="@style/Theme.AndroidFundamentals"
         tools:targetApi="31">
         <activity
+            android:name=".ThirdActivity"
+            android:exported="false" />
+        <activity android:name=".SecondActivity" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/title_activity_main"
-            
             android:theme="@style/Theme.AndroidFundamentals.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +28,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
