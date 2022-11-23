@@ -2,6 +2,8 @@ package com.jojjenator.androidfundamentals
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -55,6 +57,25 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+    }
+
+    // Inflate menu-layout
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.app_bar_menu, menu)
+        return true
+    }
+
+    // Onclick-handler
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId){
+            R.id.miAddContact -> Toast.makeText(this, "Add contact clicked", Toast.LENGTH_SHORT).show()
+            R.id.miFavorites -> Toast.makeText(this, "Favorites clicked", Toast.LENGTH_SHORT).show()
+            R.id.miSettings -> Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show()
+            R.id.miClose -> finish()
+            R.id.miFeedback -> Toast.makeText(this, "Feedback clicked", Toast.LENGTH_SHORT).show()
+
+        }
+        return true
     }
 
 }
