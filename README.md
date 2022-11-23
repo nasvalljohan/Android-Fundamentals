@@ -15,9 +15,9 @@ This code is bound to be deprecated in the near future, make sure to look into *
 - Implicit Intents
 - Toolbar Menus
 - Spinners
+- RecyclerView
 
 **Coming soon:**
-- RecyclerView
 - Fragments
 - Bottom Navigation View
 - ViewPager2
