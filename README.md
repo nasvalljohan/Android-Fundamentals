@@ -3,7 +3,7 @@
 
 Small project with fundamentals for Android Studio-beginners.
 
-## This project covers:
+### This project covers:
 - Activity fundamentals 
 - Toasts
 - Context
