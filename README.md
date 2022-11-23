@@ -1,7 +1,11 @@
 
-# Android Fundamentals - Kotlin
+# Android Fundamentals using Kotlin & XML
 
 Small project with fundamentals for Android Studio-beginners.
+This code is bound to be deprecated in the near future, make sure to look into **JetPack Compose**.
+
+*Code comes with brief explanation.*
+
 
 ### This project covers:
 - Activity fundamentals 
@@ -24,6 +28,4 @@ Small project with fundamentals for Android Studio-beginners.
 - Drag & Drops
 - Broadcast Receivers
 
-*Code comes with brief explanation.*
 
-This code is bound to be deprecated in the near future, make sure to look into **JetPack Compose**.
