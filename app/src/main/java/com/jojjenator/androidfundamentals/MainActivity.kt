@@ -4,9 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
+import android.view.View
+import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
 // Inherits from AppCompatActivity, a class that describes what an activity is.
@@ -24,6 +24,27 @@ class MainActivity : AppCompatActivity() {
         val etName = findViewById<EditText>(R.id.etName)
         val etAge = findViewById<EditText>(R.id.etAge)
         val etCountry = findViewById<EditText>(R.id.etCountry)
+        val spMonths = findViewById<Spinner>(R.id.spMonths)
+
+        // Create spinner content on runtime:
+        val customList = listOf("first","second","third","fourth")
+        val adapter = ArrayAdapter(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, customList)
+        spMonths.adapter = adapter
+
+        // Create spinner with static data defined in predefined layout-file. 
+        spMonths.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(adapterView: AdapterView<*>?, View: View?, position: Int, id: Long) {
+                if (adapterView != null) {
+                    Toast.makeText(
+                        this@MainActivity,
+                        "Current item selected: ${adapterView.getItemAtPosition(position)}",
+                        Toast.LENGTH_SHORT)
+                        .show()
+                }
+            }
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+            }
+        }
 
         // Context provided "this" is ok because activities are subclasses to context class
         // Activity-context only lives as long as the activity does
@@ -67,10 +88,54 @@ class MainActivity : AppCompatActivity() {
 
     // Onclick-handler
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        val options = arrayOf("First", "Second", "Third")
+
+
+        val addContactDialog = AlertDialog.Builder(this)
+            .setTitle("Want to add contect oskar??")
+            .setMessage("mmm...")
+            .setIcon(R.drawable.ic_add_contact)
+            .setPositiveButton("Yes!"){_,_ ->
+                Toast.makeText(this, "CLICKY", Toast.LENGTH_SHORT).show()
+            }
+            .setNegativeButton("No!"){_,_->
+                Toast.makeText(this, "CLACKY", Toast.LENGTH_SHORT).show()
+            }.create()
+
+        val singleChoiceDialog = AlertDialog.Builder(this)
+            .setTitle("Make your choice!!!!")
+            .setSingleChoiceItems(options, 0){_,i->
+                Toast.makeText(this, "You clicked in ${options[i]}", Toast.LENGTH_SHORT).show()
+            }
+            .setPositiveButton("I COMPLY!"){_,_ ->
+                Toast.makeText(this, "CLICKY", Toast.LENGTH_SHORT).show()
+            }
+            .setNegativeButton("I WILL NOT COMPLY!"){_,_->
+                Toast.makeText(this, "CLACKY", Toast.LENGTH_SHORT).show()
+            }.create()
+
+        val multiChoiceDialog = AlertDialog.Builder(this)
+            .setTitle("Make your choice!!!!")
+            .setMultiChoiceItems(options, booleanArrayOf(false,false,false)){_,i,isChecked ->
+                if(isChecked) {
+                    Toast.makeText(this, "You checked ${options[i]}", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "You unchecked ${options[i]}", Toast.LENGTH_SHORT).show()
+                }
+            }
+            .setPositiveButton("I COMPLY!"){_,_ ->
+                Toast.makeText(this, "CLICKY", Toast.LENGTH_SHORT).show()
+            }
+            .setNegativeButton("I WILL NOT COMPLY!"){_,_->
+                Toast.makeText(this, "CLACKY", Toast.LENGTH_SHORT).show()
+            }.create()
+
+
         when (item.itemId){
-            R.id.miAddContact -> Toast.makeText(this, "Add contact clicked", Toast.LENGTH_SHORT).show()
-            R.id.miFavorites -> Toast.makeText(this, "Favorites clicked", Toast.LENGTH_SHORT).show()
-            R.id.miSettings -> Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show()
+            R.id.miAddContact -> addContactDialog.show()
+            R.id.miFavorites -> singleChoiceDialog.show()
+            R.id.miSettings -> multiChoiceDialog.show()
             R.id.miClose -> finish()
             R.id.miFeedback -> Toast.makeText(this, "Feedback clicked", Toast.LENGTH_SHORT).show()
 
