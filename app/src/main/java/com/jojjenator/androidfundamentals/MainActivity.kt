@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = ArrayAdapter(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, customList)
         spMonths.adapter = adapter
 
-        // Create spinner with static data defined in predefined layout-file. 
+        // Create spinner with static data defined in predefined layout-file.
         spMonths.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
             override fun onItemSelected(adapterView: AdapterView<*>?, View: View?, position: Int, id: Long) {
                 if (adapterView != null) {
