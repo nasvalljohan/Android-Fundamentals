@@ -3,6 +3,7 @@ package com.jojjenator.androidfundamentals
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -18,6 +19,9 @@ class MainActivity : AppCompatActivity() {
 
         val btnShowToast = findViewById<Button>(R.id.btnShowToast)
         val btnOpenActivity = findViewById<Button>(R.id.btnOpenActivity)
+        val etName = findViewById<EditText>(R.id.etName)
+        val etAge = findViewById<EditText>(R.id.etAge)
+        val etCountry = findViewById<EditText>(R.id.etCountry)
 
         // Context provided "this" is ok because activities are subclasses to context class
         // Activity-context only lives as long as the activity does
@@ -33,14 +37,22 @@ class MainActivity : AppCompatActivity() {
         // Inside constructor: CTRL + P to see accepted arguments
         btnOpenActivity.setOnClickListener {
 
+            val name = etName.text.toString()
+            val age = etAge.text.toString().toInt()
+            val country = etCountry.text.toString()
+            // New person, pass in created variables
+            val person = Person(name, age, country)
+
             // PackageContext: THIS(activity context)
             // do not have to create instance of the second activity, only refer to the class
             // .also is a scope-function, much like .apply{} (...binding.apply{}).
             Intent(this, SecondActivity::class.java).also {
+
+                // Put extra serialized
+                it.putExtra("EXTRA_PERSON", person)
                 // As we see inside also: it = Intent.
                 startActivity(it) // startActivity takes intent, use it.
             }
-
 
         }
     }
