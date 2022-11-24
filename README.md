@@ -16,9 +16,9 @@ This code is bound to be deprecated in the near future, make sure to look into *
 - Toolbar Menus
 - Spinners
 - RecyclerView
+- Fragments
 
 **Coming soon:**
-- Fragments
 - Bottom Navigation View
 - ViewPager2
 - Navigation Drawer
