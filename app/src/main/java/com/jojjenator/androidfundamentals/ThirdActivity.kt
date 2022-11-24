@@ -16,6 +16,7 @@ class ThirdActivity : AppCompatActivity() {
 
         val takePhoto = findViewById<Button>(R.id.btnGetImage)
         val imageView = findViewById<ImageView>(R.id.ivPhoto)
+        val btnNext = findViewById<Button>(R.id.btnGoToFourth)
 
         // getContent gets called within intent. ser imageview to uri if its not null.
         val getContent = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
@@ -32,6 +33,13 @@ class ThirdActivity : AppCompatActivity() {
                 getContent.launch("image/*")
 
             }
+        }
+
+        btnNext.setOnClickListener {
+            Intent(this, FourthActivity::class.java).also {
+                startActivity(it)
+            }
+
         }
     }
 

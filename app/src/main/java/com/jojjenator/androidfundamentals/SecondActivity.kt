@@ -36,7 +36,7 @@ class SecondActivity: AppCompatActivity() {
 
         // Recyclerview Below:
 
-        // Layout item_todo belongs to recyclerview.
+        // Layout item_todo.xml, todoClass and todoAdapter is parts of recyclerview.
         var todoList = mutableListOf(
             Todo("learn kotlin", false),
             Todo("learn recyclerview", false),
