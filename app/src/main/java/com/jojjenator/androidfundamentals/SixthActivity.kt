@@ -25,9 +25,16 @@ class SixthActivity : AppCompatActivity() {
 
         val btnSave = findViewById<Button>(R.id.btnSavePref)
         val btnLoad = findViewById<Button>(R.id.btnLoadPref)
+        val btnNext = findViewById<Button>(R.id.btnGoToSeventh)
         val et1 = findViewById<EditText>(R.id.etSharedPref1)
         val et2 = findViewById<EditText>(R.id.etSharedPref2)
         val btnNotification = findViewById<Button>(R.id.btnShowNotification)
+
+        btnNext.setOnClickListener {
+            Intent(this, SeventhActivity::class.java).also {
+                startActivity(it)
+            }
+        }
 
         // Create new sharedPref with:
         // Name: by providing name we can read values from multiple sharedPrefs
