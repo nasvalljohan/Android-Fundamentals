@@ -22,9 +22,10 @@ This code is bound to be deprecated in the near future, make sure to look into *
 - Navigation Drawer
 - Saving data in Shared Preferences
 - Notifications & pending intents
+- Intent Service - DEPRECATED -> EDUCATIONAL ONLY
 
 **Coming soon:**
-- Intent Service
+- Services
 - Drag & Drops
 - Broadcast Receivers
 
