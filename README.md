@@ -21,9 +21,9 @@ This code is bound to be deprecated in the near future, make sure to look into *
 - ViewPager2 & TabLayoutMediator
 - Navigation Drawer
 - Saving data in Shared Preferences
+- Notifications & pending intents
 
 **Coming soon:**
-- Notifications
 - Intent Service
 - Drag & Drops
 - Broadcast Receivers
