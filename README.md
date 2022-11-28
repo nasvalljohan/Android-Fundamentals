@@ -28,5 +28,6 @@ This code is bound to be deprecated in the near future, make sure to look into *
 - Services
 - Drag & Drops
 - Broadcast Receivers
+- WorkManager
 
 
