@@ -17,10 +17,11 @@ This code is bound to be deprecated in the near future, make sure to look into *
 - Spinners
 - RecyclerView
 - Fragments
+- Bottom Navigation View
+- ViewPager2 & TabLayoutMediator
 
 **Coming soon:**
-- Bottom Navigation View
-- ViewPager2
+
 - Navigation Drawer
 - Saving data in Shared Preferences
 - Notifications
