@@ -19,10 +19,9 @@ This code is bound to be deprecated in the near future, make sure to look into *
 - Fragments
 - Bottom Navigation View
 - ViewPager2 & TabLayoutMediator
+- Navigation Drawer
 
 **Coming soon:**
-
-- Navigation Drawer
 - Saving data in Shared Preferences
 - Notifications
 - Intent Service
