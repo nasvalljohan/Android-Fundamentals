@@ -20,9 +20,9 @@ This code is bound to be deprecated in the near future, make sure to look into *
 - Bottom Navigation View
 - ViewPager2 & TabLayoutMediator
 - Navigation Drawer
+- Saving data in Shared Preferences
 
 **Coming soon:**
-- Saving data in Shared Preferences
 - Notifications
 - Intent Service
 - Drag & Drops
