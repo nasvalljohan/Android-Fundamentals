@@ -3,45 +3,42 @@ package com.jojjenator.androidfundamentals
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.jojjenator.androidfundamentals.fragments.*
+
+// When demoing this activity, see how these fragments affect the current activity/fragment stack.
+// - If you press back, does it go back to previous activity or does it show the newly replaced fragment?
+// If you want to change this behaviour you can use "addToBackStack(null)" to push fragment onto the stack.
 
 class FourthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fourth)
-        val btnFragment1 = findViewById<Button>(R.id.btnFragment1)
-        val btnFragment2 = findViewById<Button>(R.id.btnFragment2)
-        val firstFragment = FirstFragment()
-        val secondFragment = SecondFragment()
+        val bottomNavView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        val bottomnav1 = BottomNav1()
+        val bottomnav2 = BottomNav2()
+        val bottomnav3 = BottomNav3()
 
-        // In order to swap between first- and secondFragment, we need to use a fragment-transaction:
-        supportFragmentManager.beginTransaction().apply {
-            // Replace needs current containerID(=our frameLayout)
-            // Second param is which fragment to replace current with, if current == null it just sets fragment.
-            replace(R.id.flFragment, firstFragment)
 
-            // Commit will apply the changes to our transaction.
-            commit() // Now firstFragment will be visible in flFragment-container.
-        }
+        setCurrentFragmentNav(bottomnav1)
 
-        btnFragment1.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.flFragment, firstFragment) //Replace secondFragment with firstFragment
-                commit()
+        bottomNavView.setOnItemSelectedListener{
+            when(it.itemId) {
+                R.id.miHome -> setCurrentFragmentNav(bottomnav1)
+                R.id.miMessages -> setCurrentFragmentNav(bottomnav2)
+                R.id.miProfile -> setCurrentFragmentNav(bottomnav3)
             }
+            //Expects bool, just return true.
+            true
         }
-
-        btnFragment2.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.flFragment, secondFragment) //Replace firstFragment with secondFragment
-                commit()
-            }
+        bottomNavView.getOrCreateBadge(R.id.miMessages).apply {
+            this.number = 2
         }
+    }
 
-        // When demoing this activity, see how these fragments affect the current activity/fragment stack.
-        // - If you press back, does it go back to previous activity or does it show the newly replaced fragment?
-        // If you want to change this behaviour you can use "addToBackStack(null)" to push fragment onto the stack.
-
-
-
+    private fun setCurrentFragmentNav(fragment: Fragment) = supportFragmentManager.beginTransaction().apply {
+        replace(R.id.flFragment, fragment)
+        commit()
     }
 }

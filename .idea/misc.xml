@@ -4,14 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Johan/Documents/Work/AndroidStudio/AndroidFundamentals/app/src/main/res/layout/activity_fourth.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Johan/Documents/Work/AndroidStudio/AndroidFundamentals/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Johan/Documents/Work/AndroidStudio/AndroidFundamentals/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Johan/Documents/Work/AndroidStudio/AndroidFundamentals/app/src/main/res/layout/activity_second.xml" value="0.25" />
         <entry key="..\:/Users/Johan/Documents/Work/AndroidStudio/AndroidFundamentals/app/src/main/res/layout/activity_third.xml" value="0.2" />
         <entry key="..\:/Users/Johan/Documents/Work/AndroidStudio/AndroidFundamentals/app/src/main/res/layout/custom_toast.xml" value="0.18" />
+        <entry key="..\:/Users/Johan/Documents/Work/AndroidStudio/AndroidFundamentals/app/src/main/res/layout/frag_bottom_nav1.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Johan/Documents/Work/AndroidStudio/AndroidFundamentals/app/src/main/res/layout/frag_bottom_nav2.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Johan/Documents/Work/AndroidStudio/AndroidFundamentals/app/src/main/res/layout/frag_bottom_nav3.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Johan/Documents/Work/AndroidStudio/AndroidFundamentals/app/src/main/res/layout/fragment_bottom_nav1.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Johan/Documents/Work/AndroidStudio/AndroidFundamentals/app/src/main/res/layout/fragment_bottom_nav2.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Johan/Documents/Work/AndroidStudio/AndroidFundamentals/app/src/main/res/layout/fragment_bottom_nav3.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Johan/Documents/Work/AndroidStudio/AndroidFundamentals/app/src/main/res/layout/fragment_first.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Johan/Documents/Work/AndroidStudio/AndroidFundamentals/app/src/main/res/layout/fragment_second.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Johan/Documents/Work/AndroidStudio/AndroidFundamentals/app/src/main/res/layout/item_todo.xml" value="0.2921875" />
         <entry key="..\:/Users/Johan/Documents/Work/AndroidStudio/AndroidFundamentals/app/src/main/res/menu/app_bar_menu.xml" value="0.16979166666666667" />
+        <entry key="..\:/Users/Johan/Documents/Work/AndroidStudio/AndroidFundamentals/app/src/main/res/menu/bottom_nav_menu.xml" value="0.365625" />
       </map>
     </option>
   </component>

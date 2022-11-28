@@ -1,12 +1,13 @@
-package com.jojjenator.androidfundamentals
+package com.jojjenator.androidfundamentals.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.jojjenator.androidfundamentals.R
+import com.jojjenator.androidfundamentals.data.Todo
 
 // After making the innerclass:
 // 6. This adapter now needs to know which data it needs to set to which item
@@ -18,7 +19,7 @@ class TodoAdapter ( // 9. When 8 is done you will have to implement members from
     var todos: List<Todo>,
 
 
-) : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() { // 8. We now need to define that our TodoAdapter is a recyclerview-adapter.
+    ) : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() { // 8. We now need to define that our TodoAdapter is a recyclerview-adapter.
 
     // 1. Each adapter for recyclerview needs to have a inner class which is a ViewHolder-class
     // 2. As the name; the view holder is used to hold the views for the recyclerview

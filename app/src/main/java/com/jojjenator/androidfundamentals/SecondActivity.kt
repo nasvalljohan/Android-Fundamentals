@@ -8,6 +8,9 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.jojjenator.androidfundamentals.adapter.TodoAdapter
+import com.jojjenator.androidfundamentals.data.Person
+import com.jojjenator.androidfundamentals.data.Todo
 
 class SecondActivity: AppCompatActivity() {
 

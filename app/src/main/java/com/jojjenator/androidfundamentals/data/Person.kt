@@ -1,4 +1,4 @@
-package com.jojjenator.androidfundamentals
+package com.jojjenator.androidfundamentals.data
 
 import java.io.Serializable
 

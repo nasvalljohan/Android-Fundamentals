@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.jojjenator.androidfundamentals.data.Person
 
 // Inherits from AppCompatActivity, a class that describes what an activity is.
 // We inherit from it to take over that behaviour and to make our own activity out of that.
