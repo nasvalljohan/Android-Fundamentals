@@ -16,7 +16,7 @@ class FifthActivity : AppCompatActivity() {
 
     // lateinit is a promise. we promise to init this later.
     // benefit of this is that variable is global in class.
-    lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var toggle: ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

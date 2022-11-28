@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         val btnOpenActivity = findViewById<Button>(R.id.btnOpenActivity)
         val etName = findViewById<EditText>(R.id.etName)
         val etAge = findViewById<EditText>(R.id.etAge)
-        val etCountry = findViewById<EditText>(R.id.etCountry)
         val spMonths = findViewById<Spinner>(R.id.spMonths)
 
         // Create spinner content on runtime:
@@ -63,9 +62,8 @@ class MainActivity : AppCompatActivity() {
 
             val name = etName.text.toString()
             val age = etAge.text.toString().toInt()
-            val country = etCountry.text.toString()
             // New person, pass in created variables
-            val person = Person(name, age, country)
+            val person = Person(name, age)
 
             // PackageContext: THIS(activity context)
             // do not have to create instance of the second activity, only refer to the class

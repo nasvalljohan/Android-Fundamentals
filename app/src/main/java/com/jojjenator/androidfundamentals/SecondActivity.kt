@@ -40,7 +40,7 @@ class SecondActivity: AppCompatActivity() {
         // Recyclerview Below:
 
         // Layout item_todo.xml, todoClass and todoAdapter is parts of recyclerview.
-        var todoList = mutableListOf(
+        val todoList = mutableListOf(
             Todo("learn kotlin", false),
             Todo("learn recyclerview", false),
             Todo("eat", false),

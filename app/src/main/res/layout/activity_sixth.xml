@@ -4,61 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SixthActivity">
 
     <EditText
-        android:id="@+id/etName"
-        android:layout_width="match_parent"
+        android:id="@+id/etSharedPref1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Name"
+        android:hint="Secret nr 1"
+        app:layout_constraintBottom_toTopOf="@+id/etSharedPref2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/etSharedPref2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Secret nr 2"
+        app:layout_constraintBottom_toTopOf="@+id/btnLoadPref"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSharedPref1" />
+
+    <Button
+        android:id="@+id/btnSavePref"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save pref"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/etAge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Age"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etName" />
-
-    <Spinner
-        android:id="@+id/spMonths"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:entries="@array/months"
-        app:layout_constraintBottom_toTopOf="@+id/etName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLoadPref" />
 
     <Button
-        android:id="@+id/btnOpenActivity"
+        android:id="@+id/btnLoadPref"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Apply!"
+        android:text="Load Pref"
+        app:layout_constraintBottom_toTopOf="@+id/btnSavePref"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etAge" />
-
-    <Button
-        android:id="@+id/btnShowToast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="What is this?"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOpenActivity" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/etSharedPref2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
