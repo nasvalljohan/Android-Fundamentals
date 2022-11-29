@@ -23,9 +23,9 @@ This code is bound to be deprecated in the near future, make sure to look into *
 - Saving data in Shared Preferences
 - Notifications & pending intents
 - Intent Service - DEPRECATED -> EDUCATIONAL ONLY
+- Services
 
 **Coming soon:**
-- Services
 - Drag & Drops
 - Broadcast Receivers
 - WorkManager
