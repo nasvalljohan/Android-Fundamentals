@@ -40,6 +40,6 @@
             </intent-filter>
         </activity>
         <service android:name=".services.MyIntentService"/>
+        <service android:name=".services.MyService"/>
     </application>
-
 </manifest>
