@@ -25,9 +25,9 @@ This code is bound to be deprecated in the near future, make sure to look into *
 - Intent Service - DEPRECATED -> EDUCATIONAL ONLY
 - Services
 - Drag & Drops
+- Broadcast Receivers
 
 **Coming soon:**
-- Broadcast Receivers
 - WorkManager
 
 
