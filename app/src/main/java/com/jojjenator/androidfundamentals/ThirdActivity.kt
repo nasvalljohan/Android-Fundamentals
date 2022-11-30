@@ -1,14 +1,18 @@
 package com.jojjenator.androidfundamentals
 
 import android.content.Intent
+import android.content.IntentFilter
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import androidx.activity.result.contract.ActivityResultContracts
+import com.jojjenator.androidfundamentals.services.AirplaneModeChangedReceiver
 
 class ThirdActivity : AppCompatActivity() {
+
+    private lateinit var receiver: AirplaneModeChangedReceiver
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +45,37 @@ class ThirdActivity : AppCompatActivity() {
             }
 
         }
+
+        // BroadcastReceiver
+
+        /*
+        Define IntentFilter
+        Used by the system to determine which apps want to receive which intents
+        There is a variety of actions you can respond to with IntentFilter, check them out!
+        */
+
+        // ..This is a dynamic receiver..
+        IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED).also {
+            // Create instance of AirplaneModeChangedReceiver
+            receiver = AirplaneModeChangedReceiver()
+
+            /*
+            Register the receiver for the intent
+            This will actually cause memory-leak, context in airplaneMode.. class holds context
+            referencing to this activity where we created the receiver(instance of the class)
+            Imagine we close the activity, broadcast receiver is still active and will hold
+            context to our activity even tho its closed. We need onStop()
+             */
+            registerReceiver(receiver, it)
+        }
+
+    }
+
+    override fun onStop(){
+        super.onStop()
+        /* When activity is closed we now explicitly close our broadcastReceiver */
+        unregisterReceiver(receiver)
+
     }
 
 }
